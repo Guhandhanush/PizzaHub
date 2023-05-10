@@ -1,0 +1,48 @@
+<div class="order">
+  <div class="content">
+<span><h1>Order </h1></span><h1>Now</h1><br>
+<!-- options -->
+<mat-chip-listbox aria-label="Fish selection">
+  <mat-chip-option>Home Delivery</mat-chip-option>
+  <mat-chip-option>TakeAway</mat-chip-option>
+</mat-chip-listbox><br>
+
+<!-- quantity-->
+<mat-form-field appearance="outline" floatLabel="always">
+  <mat-label>Quantity</mat-label>
+  <input matInput type="number" class="example-right-align" placeholder="0">
+  <span matTextPrefix>No.of&nbsp;</span>
+  <span matTextSuffix></span>
+  <mat-error *ngIf="quantity.hasError('required')">Required</mat-error>
+</mat-form-field><br>
+
+<!-- order no-->
+<mat-form-field appearance="outline" floatLabel="always">
+  <mat-label>Order No</mat-label>
+  <input matInput type="text" class="example-right-align" placeholder="0">
+  <span matTextPrefix>&nbsp;</span>
+  <span matTextSuffix></span>
+  <mat-error *ngIf="quantity.hasError('required')">Required</mat-error>
+</mat-form-field><br>
+
+<!-- mobile number -->
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Telephone</mat-label>
+    <span matPrefix>+91 &nbsp;</span>
+    <input type="tel" matInput placeholder="99-88-77-33-55">
+    <mat-icon matSuffix>mode_edit</mat-icon>
+    <mat-error *ngIf="number.hasError('required')">Required</mat-error>
+  </mat-form-field><br>
+
+  <!-- address -->
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Address</mat-label>
+    <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+    <mat-error *ngIf="address.hasError('required')">Required</mat-error>
+  </mat-form-field><br>
+
+  <!-- buttons -->
+  <button mat-raised-button color="primary" (click)="submit()" mat-dialog-close="true">Pay Now</button>
+  <button mat-raised-button color="warn" style="margin:10px" mat-dialog-close="true">Close</button>
+</div>
+</div>

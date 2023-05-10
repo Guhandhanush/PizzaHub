@@ -1,0 +1,221 @@
+body{
+  scroll-behavior: smooth;
+}
+.nav .right {
+  position: relative;
+  left: 70%;
+}
+.nav .left a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav .left {
+  padding: 0em 5em;
+}
+.nav .right a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.nav {
+  padding: 1%;
+  background-color: #f0f0f0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.banner img {
+  min-width: 100%;
+  height: 45em;
+}
+.banner{
+
+  height: 45em;
+}
+
+
+.deliver {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  position: relative;
+  width: 100%;
+
+}
+.deliver .row{
+  display: flex;
+  width: 100%;
+
+}
+
+.deals {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1%;
+  width: 100%;
+  height: 30em;
+
+}
+
+.deals .card{
+  padding: 1%;
+}
+
+.deals img {
+  width:10em;
+  height: 30em;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.btn button {
+  width: 100%;
+  padding: 1%;
+  position: relative;
+}
+
+.btn button a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 15em;
+  padding: 5%;
+}
+
+.footer h3 {
+  padding: 1em 0em;
+}
+
+.footer h5 {
+  font-size: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.container1 {
+  padding: 5%;
+}
+
+.container1 h2 {
+  padding-bottom: 1%;
+}
+
+.btn1 {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.btn1 button {
+  width: 100%;
+  padding: 1%;
+  position: relative;
+}
+
+.deals1 {
+  padding: 3%;
+}
+
+.menu {
+  display: grid;
+  place-content: center;
+  padding: 1%;
+  position: relative;
+  top: -2rem;
+}
+
+.menu h2 {
+  color: orange;
+  font-size: 3em;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5%;
+  padding-left: 15%;
+}
+
+.container2 .veg {
+  text-align: center;
+  width: 20%;
+}
+
+.container2 .image {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.container2 .nonveg {
+  text-align: center;
+  width: 20%;
+}
+
+.container2 .pizza {
+  text-align: center;
+  width: 20%;
+}
+
+.container2 .sides {
+  text-align: center;
+  width: 20%;
+}
+
+.container2 .btn {
+  position: relative;
+  left: 30%;
+}
+
+.pasta {
+  text-align: center;
+  width: 20%;
+  display: grid;
+  padding-left: 34%;
+  padding-bottom: 6%;
+}
+
+.card img {
+  width: 100%;
+  height: 20em;
+  display: grid;
+  place-content: center;
+}
+
+/* .cards-wrapper .card{
+  width: 50px;
+  height: 10em;
+}*/
+
+.cards-wrapper{
+  display: flex;
+}
+.carousel-item{
+  padding-bottom: 2%;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* sign in */
+input .ng-invalid.ng-touched{
+  border: 1px solid red;
+}

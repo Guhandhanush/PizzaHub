@@ -1,0 +1,46 @@
+<div class="dialogregister">
+  <mat-dialog-content><h2>Register Now</h2>
+
+    <!-- input1 -->
+    <form [formGroup]="registerform">
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+    </mat-form-field>
+
+    <!-- email -->
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com">
+    </mat-form-field>
+
+    <!-- number -->
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Telephone</mat-label>
+      <span matPrefix>+91 &nbsp;</span>
+      <input type="tel" matInput placeholder="99-99-55-87-66" formControlName="number">
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+
+    <!-- address -->
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Ex. 100 Main St" formControlName="address"></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address 2</mat-label>
+      <textarea matInput placeholder="Optional"></textarea>
+    </mat-form-field>
+  </form>
+
+    <!-- buttons -->
+    <div class="button">
+    <button type="button" class="btn btn-success" (click)="submit()">Submit</button>
+    <button class="btn btn-warning" mat-dialog-close="true" style="margin-left: 7px;">Close</button>
+    </div>
+
+  </mat-dialog-content>
+
+</div>

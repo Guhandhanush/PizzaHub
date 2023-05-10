@@ -1,0 +1,23 @@
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+
+span {
+  color: orange;
+}
+
+.admin span{
+  color: white;
+}
+
+.right h6{
+  color: white;
+  display: inline;
+}
+
+.right h6:hover{
+  color: orange;
+}
+

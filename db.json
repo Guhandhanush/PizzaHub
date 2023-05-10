@@ -1,0 +1,42 @@
+{
+  "register": [
+    {
+      "username": "Guhan",
+      "emailFormControl": "guhans@gmail.com",
+      "number": "8248495397",
+      "address": "coimbatore",
+      "id": 1
+    },
+    {
+      "username": "Kingson",
+      "emailFormControl": "kingson@king.com",
+      "number": "9999999999",
+      "address": "Rajapalayam",
+      "id": 2
+    },
+    {
+      "username": "VinothKumar",
+      "emailFormControl": "vinothpck@book.com",
+      "number": "9375839204",
+      "address": "thanjavur",
+      "id": 3
+    },
+    {
+      "username": "avinas",
+      "emailFormControl": "avinas@gmail.com",
+      "number": "8787878739",
+      "address": "trichy",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

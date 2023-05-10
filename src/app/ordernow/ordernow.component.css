@@ -1,0 +1,17 @@
+.order{
+  padding: 1%;
+}
+
+.content{
+  padding: 2%;
+}
+
+mat-form-field{
+  width: 100%;
+  
+}
+
+h1{
+  display: inline;
+}
+

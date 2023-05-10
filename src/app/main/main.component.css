@@ -1,0 +1,13 @@
+.deals .card-group{
+  padding: 1;
+  width: 100%;
+}
+
+#carouselExampleControls{
+  padding-top: 2%;
+  width: 100%;
+}
+
+.button{
+  display: flex;
+}
