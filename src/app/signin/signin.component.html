@@ -6,32 +6,25 @@
       Please Enter your log in credentials for more deals and offers.
     </p>
     <!-- email -->
+    <form [formGroup]="signinform">
     <div class="form-floating mb-3">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Email</mat-label>
-        <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
-        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-          Please enter a valid email address
-        </mat-error>
-        <mat-error *ngIf="emailFormControl.hasError('required')">
-          Email is <strong>required</strong>
-        </mat-error>
+        <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com">
       </mat-form-field>
     </div>
     <!-- password -->
     <div class="form-floating">
       <mat-form-field appearance="fill" appearance="outline">
         <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
           [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-
         </button>
-        <mat-error *ngIf="password.hasError('required')">Please type your password</mat-error>
-          <mat-error *ngIf="password.hasError('required')">Password must contain atleast 8 characters</mat-error>
       </mat-form-field>
     </div>
+  </form>
     <br>
 
     <button type="button" class="btn btn-success w-100" (click)="ngsubmit()">Sign In</button>
@@ -43,6 +36,7 @@
     <div class="btn1">
       <a><button type="submit" class="btn btn-primary" (click)="open()">Register</button></a>
     </div>
+
 
   </div>
 </div>

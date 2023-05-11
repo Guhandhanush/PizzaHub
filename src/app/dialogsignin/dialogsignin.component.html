@@ -18,6 +18,13 @@
 
     <!-- number -->
     <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Password</mat-label>
+      <span matPrefix> &nbsp;</span>
+      <input type="password" matInput  formControlName="password">
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
       <mat-label>Telephone</mat-label>
       <span matPrefix>+91 &nbsp;</span>
       <input type="tel" matInput placeholder="99-99-55-87-66" formControlName="number">

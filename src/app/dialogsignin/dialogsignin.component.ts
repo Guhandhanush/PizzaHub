@@ -22,6 +22,7 @@ export class DialogsigninComponent implements OnInit {
       emailFormControl: ['', Validators.required],
       number: ['', Validators.required],
       address: ['', Validators.required],
+      password:['',Validators.required]
     });
   }
 
