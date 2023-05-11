@@ -51,6 +51,14 @@
       "address": "Paradis Island",
       "password": "tatakae",
       "id": 7
+    },
+    {
+      "username": "Kamado Tanjiro",
+      "emailFormControl": "gunpachiro@ds.com",
+      "number": "1234567890",
+      "address": "Swordsmith Village",
+      "password": "nezuko",
+      "id": 8
     }
   ],
   "comments": [

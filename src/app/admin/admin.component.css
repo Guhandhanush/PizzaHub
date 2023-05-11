@@ -1,6 +1,10 @@
 table {
   width: 100%;
+  
+}
 
+.container1{
+  background-color: orange;
 }
 
 .mat-mdc-form-field {
@@ -11,6 +15,6 @@ table {
 
 td, th {
   width: 25%;
-  background-color: orange;
+
 }
 

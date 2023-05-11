@@ -44,25 +44,20 @@ export class SigninComponent implements OnInit {
         return a.emailFormControl === this.signinform.value.emailFormControl && a.password === this.signinform.value.password
       });
 
-      const admin = res.find((a:any)=>{
-        return a.emailFormControl == 'admin@g.com' && a.password == 'tatakae'
-      });
 
-      if(admin){
-        alert('Welcom Eren');
-        this.signinform.reset();
-        this.router.navigate(['admin'])
-      }
-      
-      if(user){
+       if(user){
         alert('Login Success!');
         this.signinform.reset();
         this.router.navigate(['main'])
       }else{
-        alert('User not found!');
+        alert('Invalid Credentials!');
       }
 
+    },err=>{
+      alert('Something went wrong!')
     })
+
+
 
   }
 }
