@@ -1,110 +1,468 @@
-  <!--Deals-->
-  <div class="deals1">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card">
-          <img src="assets/images/my-vegpizza.webp" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">VEG PIZZA</h5>
-            <h6 class="card-title">Order no: v4</h6>
-            <div class="button"><button type="button" class="btn btn-danger"><s> 499</s></button>
-              <button type="button" class="btn btn-success" style="margin-left: 10px;"> 299</button>
-            </div>
-            <p class="card-text">
-              Vegetables — Green bell pepper, red onion, mushrooms, tomato,
-              and olives are the classic veggie pizza toppings. But it's your
-              pizza, and you can swap if you want to.
-            </p>
-            <a (click)="ordernow()" class="btn btn-danger">Order Now</a>
+<!--Deals-->
+<div class="deals1">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/my-vegpizza.webp"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">VEG PIZZA</h5>
+          <h6 class="card-title">Order no: v4</h6>
+          <div class="button">
+            <button type="button" class="btn btn-dark"><s> 499</s></button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              299
+            </button>
           </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="assets/images/my-nonveg.webp" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">NON VEG PIZZA</h5>
-            <h6 class="card-title">Order no: n4</h6>
-            <div class="button"><button type="button" class="btn btn-danger"><s> 799</s></button>
-              <button type="button" class="btn btn-success" style="margin-left: 10px;"> 399</button>
-            </div>
-            <p class="card-text">
-              Jerked Chicken Pizza. Indulge in the delectable flavours of
-              spicy Jamaican jerk chicken pieces on a creamy pizza that has
-              been cooked to perfection!
-            </p>
-            <a (click)="ordernow()" class="btn btn-danger">Order Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="assets/images/my-pizzamania.webp" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">PIZZA MANIA</h5>
-            <h6 class="card-title">Order no: P4</h6>
-            <div class="button"><button type="button" class="btn btn-danger"><s> 899</s></button>
-              <button type="button" class="btn btn-success" style="margin-left: 10px;"> 599</button>
-            </div>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content lead-in to additional content
-              lead-in to additional content.
-            </p>
-            <a (click)="ordernow()" class="btn btn-danger">Order Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="assets/images/sides_beverages.webp" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">SIDES & BEVERAGES (Coke & Fries)</h5>
-            <h6 class="card-title">Order no: s1</h6>
-            <div class="button"><button type="button" class="btn btn-danger"><s> 299</s></button>
-              <button type="button" class="btn btn-success" style="margin-left: 10px;"> 199</button>
-            </div>
-            <p class="card-text">
-              Choose different sides and beverages in combo and claim the
-              combo offers!
-            </p>
-            <a (click)="ordernow()" class="btn btn-danger">Order Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="assets/images/pasta_new.webp" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">PASTA</h5>
-            <h6 class="card-title">Order no: Pa1</h6>
-            <div class="button"><button type="button" class="btn btn-danger"><s> 499</s></button>
-              <button type="button" class="btn btn-success" style="margin-left: 10px;"> 399</button>
-            </div>
-            <p class="card-text">
-              The new pasta menus are now available, choose your favourite
-              pasta and enjoy the time with our pasta.
-            </p>
-            <a (click)="ordernow()" class="btn btn-danger">Order Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="assets/images/fries.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Burger & Fries</h5>
-            <h6 class="card-title">Order no: b1</h6>
-            <div class="button"><button type="button" class="btn btn-danger"><s> 499</s></button>
-              <button type="button" class="btn btn-success" style="margin-left: 10px;"> 299</button>
-            </div>
-            <p class="card-text">
-              The Burger and Fries are now available choose your favourite
-              crispy burger with the new peri peri fries.
-            </p>
-            <a (click)="ordernow()" class="btn btn-danger">Order Now</a>
-          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato, and
+            olives are the classic veggie pizza toppings. But it's your pizza,
+            and you can swap if you want to.
+          </p>
+          <a (click)="ordernow()" class="btn btn-dark">Order Now</a>
         </div>
       </div>
     </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/my-nonveg.webp"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">NON VEG PIZZA</h5>
+          <h6 class="card-title">Order no: n4</h6>
+          <div class="button">
+            <button type="button" class="btn btn-dark"><s> 799</s></button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              399
+            </button>
+          </div>
+          <p class="card-text">
+            Jerked Chicken Pizza. Indulge in the delectable flavours of spicy
+            Jamaican jerk chicken pieces on a creamy pizza that has been cooked
+            to perfection!
+          </p>
+          <a (click)="ordernow()" class="btn btn-dark">Order Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/my-pizzamania.webp"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">PIZZA MANIA</h5>
+          <h6 class="card-title">Order no: P4</h6>
+          <div class="button">
+            <button type="button" class="btn btn-dark"><s> 899</s></button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              599
+            </button>
+          </div>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural
+            lead-in to additional content lead-in to additional content lead-in
+            to additional content.
+          </p>
+          <a (click)="ordernow()" class="btn btn-dark">Order Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/sides_beverages.webp"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">SIDES & BEVERAGES (Coke & Fries)</h5>
+          <h6 class="card-title">Order no: s1</h6>
+          <div class="button">
+            <button type="button" class="btn btn-dark"><s> 299</s></button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              199
+            </button>
+          </div>
+          <p class="card-text">
+            Choose different sides and beverages in combo and claim the combo
+            offers!
+          </p>
+          <a (click)="ordernow()" class="btn btn-dark">Order Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/pasta_new.webp"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">PASTA</h5>
+          <h6 class="card-title">Order no: Pa1</h6>
+          <div class="button">
+            <button type="button" class="btn btn-dark"><s> 499</s></button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              399
+            </button>
+          </div>
+          <p class="card-text">
+            The new pasta menus are now available, choose your favourite pasta
+            and enjoy the time with our pasta.
+          </p>
+          <a (click)="ordernow()" class="btn btn-dark">Order Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="assets/images/fries.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Burger & Fries</h5>
+          <h6 class="card-title">Order no: b1</h6>
+          <div class="button">
+            <button type="button" class="btn btn-dark"><s> 499</s></button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              299
+            </button>
+          </div>
+          <p class="card-text">
+            The Burger and Fries are now available choose your favourite crispy
+            burger with the new peri peri fries.
+          </p>
+          <a (click)="ordernow()" class="btn btn-dark">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="assets/images/mania.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Pizza Mania 1</h5>
+          <h6 class="card-title">Order no: P1</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 799</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              599
+            </button>
+          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato, and
+            olives are the classic veggie pizza toppings. But it's your pizza,
+            and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="assets/images/mania1.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Pizza Mania 2</h5>
+          <h6 class="card-title">Order no: P2</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 799</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              599
+            </button>
+          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato, and
+            olives are the classic veggie pizza toppings. But it's your pizza,
+            and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="assets/images/mania2.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Pizza mania 3</h5>
+          <h6 class="card-title">Order no: P3</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 799</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              599
+            </button>
+          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato, and
+            olives are the classic veggie pizza toppings. But it's your pizza,
+            and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">Order Now</button>
+        </div>
+      </div>
+
+
+
+
+    </div>
   </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4 m-1">
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/vegpizza1.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Cheezy VEG PIZZA</h5>
+          <h6 class="card-title">Order no: v1</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 599</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              399
+            </button>
+          </div>
+
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato,
+            and olives are the classic veggie pizza toppings. But it's your
+            pizza, and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/vegpizza2.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">VEG PIZZA 2</h5>
+          <h6 class="card-title">Order no: v1</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 599</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              399
+            </button>
+          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato,
+            and olives are the classic veggie pizza toppings. But it's your
+            pizza, and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/vegpizza3.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">VEG PIZZA 3</h5>
+          <h6 class="card-title">Order no: v3</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 599</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              399
+            </button>
+          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato,
+            and olives are the classic veggie pizza toppings. But it's your
+            pizza, and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/nonveg1.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Non Veg Pizza (Chicken)</h5>
+          <h6 class="card-title">Order no: n1</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 499</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              299
+            </button>
+          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato,
+            and olives are the classic veggie pizza toppings. But it's your
+            pizza, and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/nonveg2.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Non Veg Pizza (crispy chicken)</h5>
+          <h6 class="card-title">Order no: n2</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 499</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              299
+            </button>
+          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato,
+            and olives are the classic veggie pizza toppings. But it's your
+            pizza, and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img
+          src="assets/images/nonveg3.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Non Veg Pizza 3</h5>
+          <h6 class="card-title">Order no: n3</h6>
+          <div class="button p-2">
+            <button type="button" class="btn btn-danger">
+              <s> 499</s>
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              style="margin-left: 10px"
+            >
+              299
+            </button>
+          </div>
+          <p class="card-text">
+            Vegetables — Green bell pepper, red onion, mushrooms, tomato,
+            and olives are the classic veggie pizza toppings. But it's your
+            pizza, and you can swap if you want to.
+          </p>
+          <button (click)="ordernow()" class="btn btn-dark">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

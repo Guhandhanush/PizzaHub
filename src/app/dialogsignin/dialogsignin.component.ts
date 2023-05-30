@@ -25,7 +25,7 @@ export class DialogsigninComponent implements OnInit {
   ngOnInit(): void {
     this.registerform = this.formbuilder.group({
       username: ['', Validators.required],
-      emailFormControl: ['', Validators.required],
+      email : ['', Validators.required],
       number: ['', Validators.required],
       address: ['', Validators.required],
       password: ['', Validators.required],

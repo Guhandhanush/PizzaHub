@@ -2,3 +2,32 @@
 .button{
   display: flex;
 }
+
+.card{
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1%;
+
+}
+
+.card img{
+  border-radius: 20px;
+  overflow: hidden;
+  height: 250px;
+  width: 90%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  padding-top: 1%;
+}
+
+.card a {
+  width: 30%;
+}
+
+
+.deals1{
+  background-image: url('/assets/images/mania.jpg');
+  background-size: 100%;
+  background-position: fixed;
+  background-blend-mode: darken;
+}

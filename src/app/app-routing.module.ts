@@ -18,12 +18,7 @@ const routes: Routes = [
   {
     path: 'main',
     component: MainComponent,
-    children: [
-      {
-        path: 'deals',
-        component: DealsComponent,
-      },
-    ],
+
   },
   {
     path:"register",
@@ -32,6 +27,9 @@ const routes: Routes = [
   {
     path:"admin",
     component:AdminComponent
+  }, {
+    path: 'deals',
+    component: DealsComponent,
   }
 
 ];

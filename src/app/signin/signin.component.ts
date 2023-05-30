@@ -17,6 +17,8 @@ import { Route, Router } from '@angular/router';
 export class SigninComponent implements OnInit {
   signinform!: FormGroup;
 
+  bgimage:string="assets/images/fries.jpg"
+
   constructor(private dialog: MatDialog, private formbuilder: FormBuilder,
     private http:HttpClient,private router:Router) {}
 
@@ -30,7 +32,7 @@ export class SigninComponent implements OnInit {
   /* open dialog */
   open() {
     this.dialog.open(DialogsigninComponent, {
-      width: '30%',
+      width: '40%',
     });
   }
 

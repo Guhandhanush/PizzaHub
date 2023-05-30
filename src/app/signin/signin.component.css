@@ -24,3 +24,10 @@ mat-form-field{
 mat-error{
   width: 100%;
 }
+
+.bg{
+  /* background-image: url('/assets/images/fries.jpg'); */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-blend-mode:lighten;
+}

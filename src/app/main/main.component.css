@@ -1,13 +1,77 @@
-.deals .card-group{
+.deals .card-group {
   padding: 1;
   width: 100%;
 }
 
-#carouselExampleControls{
+#carouselExampleControls {
   padding-top: 2%;
   width: 100%;
 }
 
-.button{
+.button {
   display: flex;
+}
+
+#carouselExampleInterval {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 90%;
+  height: 100%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 20px;
+}
+
+.cards {
+  padding: 2%;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1%;
+}
+
+.card img {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card a {
+  width: 50%;
+}
+
+.cards-wrapper{
+  gap: 15px;
+}
+
+.col img{
+  z-index: -1;
+  height: 80%;
+  width: 100%;
+  border-radius: 10px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  filter: brightness(50%);
+  transition: 1s;
+}
+
+.col img:hover{
+  filter: brightness(100%);
+  cursor: pointer;
+}
+
+.cover{
+  margin-left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+  padding: 1%;
+}
+
+.col h4{
+  z-index: 5;
+  position: relative;
+  top: 100px;
+  left: 5%;
+  color: white;
 }
