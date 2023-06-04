@@ -5,6 +5,9 @@ import { MainComponent } from './main/main.component';
 import { DealsComponent } from './deals/deals.component';
 import { DialogsigninComponent } from './dialogsignin/dialogsignin.component';
 import { AdminComponent } from './admin/admin.component';
+import { AllComponent } from './components/pages/all/all.component';
+import { FoodPageComponent } from './components/pages/food-page/food-page.component';
+import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 
 const routes: Routes = [
   {
@@ -30,6 +33,26 @@ const routes: Routes = [
   }, {
     path: 'deals',
     component: DealsComponent,
+  },
+  {
+    path:'all',
+    component:AllComponent
+  },
+  {
+    path:'search/:search',
+    component:AllComponent
+  },
+  {
+    path:'tag/:tag',
+    component:AllComponent
+  },
+  {
+    path:'food/:id',
+    component:FoodPageComponent
+  },
+  {
+    path:'cart-page',
+    component:CartPageComponent
   }
 
 ];

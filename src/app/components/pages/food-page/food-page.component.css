@@ -1,0 +1,71 @@
+.container-sm img{
+  width: 700px;
+  height: 500px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 20px;
+}
+
+.container-sm{
+  padding-top: 2%;
+  padding-bottom: 3%;
+  display: flex;
+  gap: 15px;
+}
+
+.details{
+
+  width: 100em;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 20px;
+  padding: 2%;
+}
+
+.details .header{
+  font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.details .rating{
+  padding: 1%;
+}
+
+.tags{
+  padding: 1%;
+  display: flex;
+  gap: 5px;
+}
+
+.tags a{
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 1.5%;
+  border-radius: 5px;
+
+}
+
+.cooktime{
+  padding: 1%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+.price{
+  padding: 1%;
+  color: rgb(2, 246, 2);
+}
+
+.description{
+  padding: 1%;
+  padding-bottom: 2%;
+}
+
+button{
+  padding: 2%;
+}
+
+.button{
+  padding-top: 2%;
+}

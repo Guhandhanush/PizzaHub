@@ -1,0 +1,123 @@
+.list a{
+  text-decoration: none;
+  color: orange;
+}
+
+.list img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+ul{
+  border: 1px solid gray;
+  list-style: none;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid orange;
+}
+
+ul li:last-child
+{
+  border: none;
+}
+
+li div{
+  padding: 1rem;
+}
+
+li dev:not(:first-child){
+  flex-basis: 18%;
+}
+
+li select{
+  width: 3rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+li button{
+  border-radius: 20px;
+  padding: 1%;
+}
+
+.list{
+  display: flex;
+}
+
+.checkout{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 3;
+  height: 20rem;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.checkout>div{
+  font-size: 1..4rem;
+  margin: 1rem;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.foods-count{
+  margin-bottom: 1.5rem;
+}
+
+.foods-count::before
+{
+  content: "Count: ";
+  color: gray;
+}
+
+.total-price::before{
+  content: "Price: ";
+  color: gray;
+}
+
+.checkout a{
+  padding: 1rem;
+  color: orange;
+  background-color: black;
+  display: block;
+  width: 99%;
+  border-radius: 1rem;
+  text-align: center;
+  opacity: 0.7;
+  justify-self: center;
+  text-decoration: none;
+}
+
+.checkout a:hover
+{
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+.body{
+  min-height: 100vh;
+}

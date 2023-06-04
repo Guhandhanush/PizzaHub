@@ -21,3 +21,30 @@ span {
   color: orange;
 }
 
+.right {
+  display: flex;
+  cursor: pointer;
+  width: 490px;
+}
+
+.right h2{
+
+  width: 250px;
+  position: relative;
+  left: -5%;
+
+}
+
+.right .btn{
+  position: relative;
+  left: -20%;
+
+
+}
+
+.nav{
+  position: sticky;
+  top: 0px;
+  z-index: 50;
+}
+

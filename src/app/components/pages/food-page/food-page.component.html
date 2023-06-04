@@ -1,0 +1,47 @@
+<div *ngIf="food" class="container-sm">
+  <img [src]="food.imageurl" alt="{{ food.name }}" />
+
+  <div class="details">
+    <div class="header">
+      <span> <strong> {{ food.name | uppercase }}</strong></span>
+      <span class="favorite {{ food.favorite ? '' : 'not' }}">❤️</span>
+    </div>
+
+
+
+  <div class="rating">
+    <star-rating
+      [value]="food.stars"
+      [totalstars]="5"
+      checkedcolor="red"
+      uncheckedcolor="black"
+      size="22px"
+      [readonly]="true"
+    ></star-rating>
+  </div>
+
+  <div class="tags">
+    <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
+      {{tag}}
+    </a>
+  </div>
+
+  <div class="cooktime">
+    <span>Time to cook ⏱️ <strong>{{food.cooktime}}</strong></span>
+  </div>
+
+  <div class="price">
+    <span> <strong>{{food.price | currency}}</strong> </span>
+  </div>
+
+  <div class="description">
+    <h6>Description</h6>
+    <span>{{food.description}}</span>
+  </div>
+
+  <div class="button">
+    <button class="btn btn-warning" (click)="addtocart()">Add to Cart</button>
+  </div>
+
+</div>
+</div>

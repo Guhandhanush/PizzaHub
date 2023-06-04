@@ -6,11 +6,17 @@
     </a>
   </div>
   <div class="right">
+    <h2>
+      <a (click)="open()">Register <span>N</span>ow</a>
+    </h2>
 
     <h2>
-
       <a routerLink="/signin"><span>Sign</span>In</a>
     </h2>
+    <div class="btn btn-dark" routerLink="/cart-page">
+      <i style="font-size: 25px;" class="fas fa-cart-plus"></i>
+      <div style="font-size: 10px;" class="badge bg-danger" *ngIf="cartquantity">{{cartquantity}}</div>
+    </div>
   </div>
 </div>
 <div class="outlet">

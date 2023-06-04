@@ -10,6 +10,7 @@
 
 .button {
   display: flex;
+  gap: 15px;
 }
 
 #carouselExampleInterval {
@@ -30,6 +31,12 @@
   border-radius: 20px;
   overflow: hidden;
   padding: 1%;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card:hover{
+  transform: translateY(-3px);
 }
 
 .card img {

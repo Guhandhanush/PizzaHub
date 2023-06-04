@@ -21,9 +21,17 @@ import { OrdernowComponent } from './ordernow/ordernow.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
-import {MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { RatingModule } from 'ng-starrating';
+import { AllComponent } from './components/pages/all/all.component';
+import { SearchbarComponent } from './components/partials/searchbar/searchbar.component';
+import { TagsComponent } from './components/partials/tags/tags.component';
+import { FoodPageComponent } from './components/pages/food-page/food-page.component';
+import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { TitleComponent } from './components/partials/title/title.component';
+import { NotFoundComponent } from './components/partials/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +42,13 @@ import {MatSortModule} from '@angular/material/sort';
     DialogsigninComponent,
     OrdernowComponent,
     AdminComponent,
+    AllComponent,
+    SearchbarComponent,
+    TagsComponent,
+    FoodPageComponent,
+    CartPageComponent,
+    TitleComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +69,8 @@ import {MatSortModule} from '@angular/material/sort';
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

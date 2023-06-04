@@ -1,10 +1,8 @@
 .btn1 button{
-  width: 40em;
+  padding: 2%;
+
 }
 
-.btn1 a{
-  text-decoration: none;
-}
 
 input .ng-invalid.ng-touched{
   border: 1px solid red;
@@ -26,8 +24,17 @@ mat-error{
 }
 
 .bg{
-  /* background-image: url('/assets/images/fries.jpg'); */
+  background-image: url('/assets/images/blur.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-blend-mode:lighten;
+  background-blend-mode:darken;
+}
+
+.container1{
+  background: rgba(255, 255, 255, 0.89);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(2.6px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
