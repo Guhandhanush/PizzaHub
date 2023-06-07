@@ -1,24 +1,90 @@
-<!--nav-->
-<div class="nav">
-  <div class="left">
-    <a routerLink="/main">
-      <h2>Pizza<span>H</span>ub</h2>
-    </a>
-  </div>
-  <div class="right">
-    <h2>
-      <a (click)="open()">Register <span>N</span>ow</a>
-    </h2>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-2 ">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/main"
+      ><h2>Pizza<span>H</span>ub</h2></a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/main"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/all">All Deals</a>
+        </li>
 
-    <h2>
-      <a routerLink="/signin"><span>Sign</span>In</a>
-    </h2>
-    <div class="btn btn-dark" routerLink="/cart-page">
-      <i style="font-size: 25px;" class="fas fa-cart-plus"></i>
-      <div style="font-size: 10px;" class="badge bg-danger" *ngIf="cartquantity">{{cartquantity}}</div>
+        <!--  <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="d-flex p-2">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown" *ngIf="user.token">
+            <a
+              class="nav-link dropdown-toggle p-2"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="cursor: pointer;"
+            >
+             {{user.name}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="cursor: pointer;">
+              <li><a class="dropdown-item">Profile</a></li>
+              <li><a class="dropdown-item">Orders</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" (click)="logout()">Log Out</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"*ngIf="!user.token">
+            <a
+              class="nav-link d-flex"
+              (click)="open()"
+              style="cursor: pointer; color: aliceblue"
+              *ngIf="!user.token"
+              >Register <span>N</span>ow</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="!user.token">
+            <a class="nav-link" routerLink="/signin" style="color: aliceblue"
+              >Log<span>I</span>n</a
+            >
+          </li>
+
+        </ul>
+        <!--   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Search</button> -->
+        <div class="btn btn-dark" routerLink="/cart-page">
+          <i style="font-size: 25px" class="fas fa-cart-plus"></i>
+          <div
+            style="font-size: 10px"
+            class="badge bg-danger"
+            *ngIf="cartquantity"
+          >
+            {{ cartquantity }}
+          </div>
+        </div>
+      </form>
     </div>
   </div>
-</div>
+</nav>
+
 <div class="outlet">
   <router-outlet></router-outlet>
 </div>
@@ -26,7 +92,7 @@
 <!--footer-->
 <div class="footer">
   <div class="one">
-    <h3><a href=""></a>Order Now </h3>
+    <h3><a href=""></a>Order Now</h3>
     <h5><a routerLink="/main/deals">Deals</a></h5>
     <h5><a href="">Sides</a></h5>
     <h5><a href="">Drinks</a></h5>

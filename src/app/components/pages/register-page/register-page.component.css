@@ -1,0 +1,42 @@
+.btn1 button{
+  padding: 2%;
+}
+
+form input{
+  padding: 2%;
+}
+
+
+input .ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+
+.error{
+  border: 1px solid red;
+}
+
+
+
+
+
+
+.bg{
+  background-image: url('/assets/images/blur.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-blend-mode:darken;
+}
+
+.container1{
+  background: rgba(255, 255, 255, 0.89);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(2.6px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  width: 60%;
+}
+
+label{
+  font-weight: 500;
+}

@@ -48,7 +48,7 @@ export const sample_foods: Food[] = [
     imageurl: 'assets/images/food-4.jpg',
     tags: ['FastFood', 'Fry'],
     description:
-      'Fried potatoes, also known as french fries, are a crispy and indulgent side dish made from sliced or cut potatoes that are deep-fried until golden and delicious. ',
+      'Fried potatoes, also known as french fries, are a crispy and indulgent side dish made from sliced or cut potatoes that are deep-fried until golden and delicious.',
   },
   {
     id: '5',
@@ -88,7 +88,7 @@ export const sample_foods: Food[] = [
   },
   {
     id: '8',
-    name: 'NON VEG PIZZA',
+    name: 'NON-VEG PIZZA',
     price: 299,
     cooktime: '40-50',
     favorite: false,
@@ -119,9 +119,10 @@ export const sample_foods: Food[] = [
     description:
       'Choose different sides and beverages in combo and claim the combo offers!',
     stars: 4.0,
-    imageurl: 'assets/images/sides_beverages.webp ',
+    imageurl: 'assets/images/sides_beverages.webp',
     tags: ['FastFood'],
   },
+  //
   {
     id: '11',
     name: 'PASTA',

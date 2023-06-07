@@ -21,8 +21,9 @@ resetLinkText="Go To Homepage!">
           </a>
         </div>
         <div>
-          <select #quantityselect [value]="cartitem.quantity"
+          <select  #quantityselect [value]="cartitem.quantity"
           (change)="changequantity(cartitem,quantityselect.value)">
+          <option selected></option>
           <option>1</option>
           <option>2</option>
           <option>3</option>

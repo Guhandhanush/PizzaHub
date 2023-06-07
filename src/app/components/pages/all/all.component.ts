@@ -17,7 +17,19 @@ export class AllComponent {
   food!:Food;
   constructor(private foodservice:FoodService,activateRoute:ActivatedRoute,private cartservice:CartService,
     private router:Router){
-      let foodObservable:Observable<Food[]>;
+      activateRoute.params.subscribe((params)=>{
+        if(params['search'])
+        this.foods = this.foodservice.getallfoodsbysearch(params['search']);
+        else if(params['tag'])
+        this.foods = this.foodservice.getallfoodsbytag(params['tag']);
+        else
+        this.foods = foodservice.getall();
+      })
+
+
+
+
+     /*  let foodObservable:Observable<Food[]>;
     activateRoute.params.subscribe((params)=>{
     if(params['search'])
     foodObservable = this.foodservice.getallfoodsbysearch(params['search'])
@@ -25,11 +37,10 @@ export class AllComponent {
     foodObservable = this.foodservice.getallfoodsbytag(params['tag'])
     else
     foodObservable=foodservice.getall();
-
     foodObservable.subscribe((sub)=>{
       this.foods = sub;
     })
-    })
+    }) */
 
 
   }

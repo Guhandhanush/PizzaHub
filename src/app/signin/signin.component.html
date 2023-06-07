@@ -11,7 +11,7 @@
     <div class="form-floating mb-3">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Email</mat-label>
-        <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com">
+        <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
       </mat-form-field>
     </div>
     <!-- password -->
@@ -25,17 +25,18 @@
         </button>
       </mat-form-field>
     </div>
-  </form>
+
     <br>
 
-    <button type="button" class="btn btn-dark w-100" (click)="ngsubmit()">Sign In</button>
+    <button type="button" class="btn btn-dark w-100" (click)="submit()">Sign In</button>
+  </form>
   <br>
     <div>
       <p>New User? Register Below</p>
     </div>
 
     <div class="btn1">
-      <button type="button" class="btn btn-warning" (click)="open()">Register</button>
+      <button type="button" class="btn btn-warning" (click)="open()" >Register</button>
     </div>
 
 

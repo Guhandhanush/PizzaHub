@@ -9,7 +9,7 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   postusers(data : any){
-    return this.http.post<any>("http://localhost:3003/regusers", data);
+    return this.http.post<any>("http://localhost:3003/admin", data);
   }
 
   getusers(){
