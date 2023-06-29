@@ -1,0 +1,33 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="nav.toggle();">
+      <mat-icon >menu</mat-icon>
+    </button>
+    <h1>&nbsp;Admin Dashboard</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- sidenav -->
+<mat-sidenav-container>
+  <mat-sidenav #nav mode="side">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/sidebar/admin"> <mat-icon>home</mat-icon> Dashboard</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/sidebar/category"> <mat-icon>category</mat-icon> Manage Category</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/sidebar/products"> <mat-icon>inventory</mat-icon> Manage Products</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/sidebar/users"> <mat-icon>people</mat-icon> Users</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 90vh;">
+    <router-outlet></router-outlet></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

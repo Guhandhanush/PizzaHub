@@ -1,0 +1,25 @@
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  width: 100%;
+}
+
+.row{
+  position: relative;
+  left: 10%;
+}
+
+.body{
+  min-height: 100vh;
+}
+
+mat-card h1{
+  margin-left: 60%;
+  transform: translate(-50%);
+}

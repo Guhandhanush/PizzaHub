@@ -18,30 +18,37 @@ import {
 export class FoodService {
   constructor(private http: HttpClient) {}
 
-  getall(): Food[] {
+ /*  getall():Observable<Food[]> {
+    return this.http.get<Food[]>("http://localhost:2628/products");
+  } */
+
+  getall():Food[]{
     return sample_foods;
   }
 
-  getallfoodsbysearch(search: string) {
-    return this.getall().filter((food) =>
-      food.name.toLowerCase().includes(search.toLowerCase())
-    );
+ /*  getallfoodsbysearch(search: string):Observable<Food[]>{
+    return this.http.get<Food[]>("http://localhost:2628/products"+search);
+  } */
+
+  getallfoodsbysearch(search: string){
+    return this.getall().filter(food => food.name.toLowerCase().includes(search.toLowerCase()));
   }
+
 
   getalltags(): tag[] {
     return sample_tags;
     /* return this.http.get<tag[]>(FOODS_TAGS_URL) */
   }
 
-  getallfoodsbytag(tag: string): Food[] {
-    return tag === 'All'
-      ? this.getall()
-      : this.getall().filter((food) => food.tags?.includes(tag));
-    /* this.http.get<Food[]>(FOODS_BY_TAG_URL+tag);  */
-  }
+   getallfoodsbytag(tag: string): Food[] {
+     return tag === 'All'
+       ? this.getall()
+       : this.getall().filter((food) => food.tags?.includes(tag));
+     /* this.http.get<Food[]>(FOODS_BY_TAG_URL+tag);  */
+   }
 
-  getfoodbyid(foodid: string) {
-    /* return this.http.get<Food>(FOODS_BY_ID_URL + foodid) */
+  getfoodbyid(foodid: string):Food{
+     /* return this.http.get<Food>("http://localhost:2628/products"+ foodid) */
     return this.getall().find((food) => food.id == foodid) ?? new Food();
   }
 }

@@ -1,45 +1,59 @@
 <!--Form-->
 <div class="bg">
-<div class="container">
-  <div class="container1">
-    <h2>Sign In</h2>
-    <p>
-      Please Enter your log in credentials for more deals and offers.
-    </p>
-    <!-- email -->
-    <form [formGroup]="signinform">
-    <div class="form-floating mb-3">
-      <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Email</mat-label>
-        <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
-      </mat-form-field>
-    </div>
-    <!-- password -->
-    <div class="form-floating">
-      <mat-form-field appearance="fill" appearance="outline">
-        <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  <div class="container">
+    <div class="container1">
+      <h2>Sign In</h2>
+      <p>Please Enter your log in credentials for more deals and offers.</p>
+      <!-- email -->
+      <form [formGroup]="signinform">
+        <div class="form-floating mb-3">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              formControlName="email"
+              placeholder="Ex. pat@example.com"
+            />
+          </mat-form-field>
+        </div>
+        <!-- password -->
+        <div class="form-floating">
+          <mat-form-field appearance="fill" appearance="outline">
+            <mat-label>Enter your password</mat-label>
+            <input
+              matInput
+              [type]="hide ? 'password' : 'text'"
+              formControlName="password"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+
+        <br />
+
+        <button type="button" class="btn btn-dark w-100" (click)="handleSubmit()" >
+          Sign In
         </button>
-      </mat-form-field>
+      </form>
+      <br />
+      <div>
+        <p>New User? Register Below</p>
+      </div>
+
+      <div class="btn1">
+        <button type="button" class="btn btn-warning" routerLink="/register-page">
+          Register
+        </button>
+      </div>
     </div>
-
-    <br>
-
-    <button type="button" class="btn btn-dark w-100" (click)="submit()">Sign In</button>
-  </form>
-  <br>
-    <div>
-      <p>New User? Register Below</p>
-    </div>
-
-    <div class="btn1">
-      <button type="button" class="btn btn-warning" (click)="open()" >Register</button>
-    </div>
-
-
   </div>
-</div>
 </div>

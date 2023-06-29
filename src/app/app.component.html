@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-2 ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-2">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/main"
       ><h2>Pizza<span>H</span>ub</h2></a
@@ -31,9 +31,8 @@
         </li> -->
       </ul>
       <form class="d-flex p-2">
-
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown" *ngIf="user.token">
+          <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle p-2"
               href="#"
@@ -41,32 +40,41 @@
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              style="cursor: pointer;"
+              style="cursor: pointer"
             >
-             {{user.name}}
+              {{ user.name }}
+              Guhan.S
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="cursor: pointer;">
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown"
+              style="cursor: pointer"
+            >
               <li><a class="dropdown-item">Profile</a></li>
               <li><a class="dropdown-item">Orders</a></li>
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" (click)="logout()">Log Out</a></li>
             </ul>
           </li>
-          <li class="nav-item"*ngIf="!user.token">
+          <li class="nav-item">
             <a
-              class="nav-link d-flex"
-              (click)="open()"
+              class="nav-link d-flex bg"
+              id="reg"
               style="cursor: pointer; color: aliceblue"
               *ngIf="!user.token"
-              >Register <span>N</span>ow</a
-            >
+              routerLink="/register-page"
+              >Register <span>N</span>ow<i class="fa-solid fa-user-plus"></i
+            ></a>
           </li>
-          <li class="nav-item" *ngIf="!user.token">
-            <a class="nav-link" routerLink="/signin" style="color: aliceblue"
-              >Log<span>I</span>n</a
-            >
+          <li class="nav-item">
+            <a
+              id="login"
+              class="nav-link bg"
+              routerLink="/signin"
+              style="color: aliceblue"
+              >Log<span>I</span>n<i class="fas fa-solid fa-right-to-bracket"></i
+            ></a>
           </li>
-
         </ul>
         <!--   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-warning" type="submit">Search</button> -->

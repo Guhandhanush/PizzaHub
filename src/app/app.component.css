@@ -2,7 +2,10 @@
 .footer a{
   text-decoration: none;
   color: white;
+
 }
+
+
 
 span {
   color: orange;
@@ -47,4 +50,36 @@ span {
   top: 0px;
   z-index: 50;
 }
+
+.bg{
+  background-color: orange;
+  font-weight: 500;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.bg span{
+  color: black;
+}
+
+#login{
+  width: 100%;
+  display: flex;
+
+}
+
+#login i{
+  margin-left: 5px;
+  position: relative;
+  top: 3px;
+  color: black;
+}
+
+#reg i{
+  margin-left: 5px;
+  position: relative;
+  top: 3px;
+  color: black;
+}
+
 

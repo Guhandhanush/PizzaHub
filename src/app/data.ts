@@ -233,12 +233,12 @@ export const sample_foods: Food[] = [
   },
   {
     id: '20',
-    name: 'Non Veg Pizza (crispy chicken)',
+    name: 'Crispy Pizza (crispy chicken)',
     price: 399,
     cooktime: '40-50',
     favorite: false,
     description:
-      'Vegetables — Green bell pepper, red onion, mushrooms, tomato, and olives are the classic veggie pizza toppings. But it s your pizza,  and you can swap if you want to.',
+      'Crispy — Green bell pepper, red onion, mushrooms, tomato, and olives are the classic veggie pizza toppings. But it s your pizza,  and you can swap if you want to.',
     stars: 4.0,
     imageurl: 'assets/images/nonveg2.jpg',
     tags: ['FastFood', 'Pizza', 'Lunch'],
@@ -250,7 +250,7 @@ export const sample_foods: Food[] = [
     cooktime: '40-50',
     favorite: false,
     description:
-      'Vegetables — Green bell pepper, red onion, mushrooms, tomato, and olives are the classic veggie pizza toppings. But it s your pizza,and you can swap if you want to.',
+      'Chicken — Green bell pepper, red onion, mushrooms, tomato, and olives are the classic veggie pizza toppings. But it s your pizza,and you can swap if you want to.',
     stars: 4.0,
     imageurl: 'assets/images/nonveg3.jpg',
     tags: ['FastFood', 'Pizza', 'Lunch'],

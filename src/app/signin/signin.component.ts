@@ -10,6 +10,7 @@ import { DialogsigninComponent } from '../dialogsignin/dialogsignin.component';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { ApiService } from '../service/api.service';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -17,18 +18,18 @@ import { UserService } from '../services/user.service';
 })
 export class SigninComponent implements OnInit {
   signinform!: FormGroup;
-  isSubmitted= false;
-  returnUrl='';
-  bgimage: string = 'assets/images/fries.jpg';
+  isSubmitted = false;
+  returnUrl = '';
+  responseMessage: any;
 
   constructor(
     private dialog: MatDialog,
     private formbuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
-    private userService:UserService,
-    private activatedroute:ActivatedRoute,
-
+    private userService: UserService,
+    private api:ApiService,
+    private activatedroute: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
@@ -38,22 +39,14 @@ export class SigninComponent implements OnInit {
       password: ['', Validators.required],
     });
 
-    this.returnUrl=this.activatedroute.snapshot.queryParams['returnUrl'];
-  }
-
-
-  /* open dialog */
-  open() {
-    this.dialog.open(DialogsigninComponent, {
-      width: '40%',
-    });
+    this.returnUrl = this.activatedroute.snapshot.queryParams['returnUrl'];
   }
 
   hide = true;
 
   /* button function */
   ngsubmit() {
-    this.http.get<any>('http://localhost:3003/register').subscribe(
+    this.http.get<any>('http://localhost:2628/users').subscribe(
       (res) => {
         const user = res.find((a: any) => {
           return (
@@ -76,26 +69,44 @@ export class SigninComponent implements OnInit {
     );
   }
 
-  get fc(){
+  get fc() {
     return this.signinform.controls;
   }
 
+  submit() {
+    if (this.signinform.valid) {
+      this.isSubmitted = true;
+      if (this.signinform.invalid) return;
 
-  submit(){
-    if(this.signinform.valid){
-    this.isSubmitted =true;
-    if(this.signinform.invalid)return;
-
-    this.userService.login({email:this.fc['email'].value,
-    password:this.fc['password'].value}).subscribe(()=>{
-      this.router.navigateByUrl('all');
-
-
-    });
-  }else{
-    alert('Invalid Credentials');
+      this.userService
+        .login({
+          email: this.fc['email'].value,
+          password: this.fc['password'].value,
+        })
+        .subscribe(() => {
+          this.router.navigateByUrl('all');
+        });
+    } else {
+      alert('Invalid Credentials');
+    }
   }
 
-  }
+  handleSubmit(){
 
+  var signinData = this.signinform.value;
+  var data = {
+    email:signinData.email,
+    password:signinData.password
+  }
+    this.api.login(data).subscribe((response:any)=>{
+      localStorage.setItem('token',response.token);
+      this.router.navigate(['/all']);
+      this.signinform.reset();
+    },
+    (err)=>{
+      this.responseMessage = err.error?.message;
+      console.log(this.responseMessage);
+
+    })
+  }
 }

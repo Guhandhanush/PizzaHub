@@ -1,0 +1,23 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="nav.toggle();">
+      <mat-icon >menu</mat-icon>
+    </button>
+    <h1>Welcome Admin</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- sidenav -->
+<mat-sidenav-container>
+  <mat-sidenav #nav mode="side">
+    <mat-nav-list>
+      <a mat-list-item> <mat-icon>dashboard</mat-icon> <b>Dashboard</b></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 90vh;">
+    <router-outlet></router-outlet></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -3,7 +3,6 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { user } from '../shared/models/user';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { HttpClient } from '@angular/common/http';
-import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/urs';
 import { ToastrService } from 'ngx-toastr';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
 
@@ -19,7 +18,7 @@ export class UserService {
   }
 
   login(userLogin: IUserLogin): Observable<user> {
-    return this.http.post<user>(USER_LOGIN_URL, userLogin).pipe(
+    return this.http.post<user>('http://localhost:2628/users', userLogin).pipe(
       tap({
         next: (user) => {
           this.setUserLocalStorage(user);
@@ -31,44 +30,44 @@ export class UserService {
           );
         },
         error: (errorresponse) => {
-          alert("Login failed")
+          alert('Login failed');
           this.toastrService.error(errorresponse.error, 'Login failed');
         },
       })
     );
   }
 
-  register(userRegister:IUserRegister):Observable<user>{
-    return this.http.post<user>(USER_REGISTER_URL,userRegister).pipe(
-      tap({
-        next: (user) => {
-          this.setUserLocalStorage(user);
-          this.userSubject.next(user);
-          alert(`Welcome to PizzaHub ${user.name}`);
-        },
-      error:(err) => {
-        alert(`Register Failed`);
-        console.log(err);
-
-      }
-      })
-    )
+  register(userRegister: IUserRegister): Observable<user> {
+    return this.http
+      .post<user>('http://localhost:2628/register', userRegister)
+      .pipe(
+        tap({
+          next: (user) => {
+            this.setUserLocalStorage(user);
+            this.userSubject.next(user);
+            alert(`Welcome to PizzaHub ${user.name}`);
+          },
+          error: (err) => {
+            alert(`Register Failed`);
+            console.log(err);
+          },
+        })
+      );
   }
 
-  logout(){
+  logout() {
     this.userSubject.next(new user());
     localStorage.removeItem(USER_KEY);
     window.location.reload();
   }
 
-  private setUserLocalStorage(user:user){
+  private setUserLocalStorage(user: user) {
     localStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 
-  private getUserLocalStorage():user{
+  private getUserLocalStorage(): user {
     const UserJson = localStorage.getItem(USER_KEY);
-    if(UserJson) return JSON.parse(UserJson) as user;
+    if (UserJson) return JSON.parse(UserJson) as user;
     return new user();
   }
-
 }

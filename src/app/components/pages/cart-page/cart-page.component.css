@@ -89,7 +89,7 @@ li button{
 
 .foods-count::before
 {
-  content: "Count: ";
+  content: "Quantity: ";
   color: gray;
 }
 
