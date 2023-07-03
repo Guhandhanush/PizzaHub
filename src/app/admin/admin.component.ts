@@ -35,6 +35,8 @@ export class AdminComponent implements OnInit{
       },
       error:(err)=>{
         alert('Error while fetching')
+        console.log(err);
+
       }
 
     })

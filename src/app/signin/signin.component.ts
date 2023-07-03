@@ -1,50 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  Validators,
-  FormBuilder,
-} from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { DialogsigninComponent } from '../dialogsignin/dialogsignin.component';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { ApiService } from '../service/api.service';
+
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css'],
 })
+
 export class SigninComponent implements OnInit {
   signinform!: FormGroup;
   isSubmitted = false;
   returnUrl = '';
   responseMessage: any;
+  hide = true;
 
   constructor(
-    private dialog: MatDialog,
     private formbuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
     private userService: UserService,
-    private api:ApiService,
-    private activatedroute: ActivatedRoute,
+    private api: ApiService,
+    private activatedroute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.signinform = this.formbuilder.group({
-      /* validation */
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
-
     this.returnUrl = this.activatedroute.snapshot.queryParams['returnUrl'];
   }
 
-  hide = true;
-
-  /* button function */
   ngsubmit() {
     this.http.get<any>('http://localhost:2628/users').subscribe(
       (res) => {
@@ -91,22 +81,22 @@ export class SigninComponent implements OnInit {
     }
   }
 
-  handleSubmit(){
-
-  var signinData = this.signinform.value;
-  var data = {
-    email:signinData.email,
-    password:signinData.password
-  }
-    this.api.login(data).subscribe((response:any)=>{
-      localStorage.setItem('token',response.token);
-      this.router.navigate(['/all']);
-      this.signinform.reset();
-    },
-    (err)=>{
-      this.responseMessage = err.error?.message;
-      console.log(this.responseMessage);
-
-    })
+  handleSubmit() {
+    var signinData = this.signinform.value;
+    var data = {
+      email: signinData.email,
+      password: signinData.password,
+    };
+    this.api.login(data).subscribe(
+      (response: any) => {
+        localStorage.setItem('token', response.token);
+        this.router.navigate(['/all']);
+        this.signinform.reset();
+      },
+      (err) => {
+        this.responseMessage = err.error?.message;
+        console.log(this.responseMessage);
+      }
+    );
   }
 }

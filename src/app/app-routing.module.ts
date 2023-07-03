@@ -112,7 +112,7 @@ const routes: Routes = [
   {
     path: 'category',
     component: ManageCategoryComponent,
-    canActivate: [RouteGuardService],
+    canActivate: [RouteGuardService], /* canActivate returns true or false here, =mainly used for authentication */
     data: {
       expectedRole: ['admin'],
     },

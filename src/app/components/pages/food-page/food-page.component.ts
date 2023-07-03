@@ -17,13 +17,9 @@ export class FoodPageComponent {
     activateRoute.params.subscribe((params)=>{
       if(params['id'])
       this.food = foodservice.getfoodbyid(params['id']);
-
-        /* foodservice.getfoodbyid(params['id']).subscribe(sub => {
-        this.food = sub;
-       }); */
     })
   }
-
+ 
   addtocart(){
     this.cartservice.addtocart(this.food);
     this.router.navigateByUrl('/cart-page');

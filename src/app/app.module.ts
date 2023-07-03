@@ -110,8 +110,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     RatingModule,
     MatSnackBarModule,
     MatButtonToggleModule,
-    MatSlideToggleModule,
-    ToastrModule.forRoot(),
+    MatSlideToggleModule
   ],
   providers: [
     HttpClientModule,

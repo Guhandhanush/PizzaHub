@@ -1,10 +1,6 @@
 <div class="body">
   <app-searchbar></app-searchbar>
   <app-tags></app-tags>
-  <!-- <app-not-found
-  [visible]="!foods || !foods.length"
-  resetLinkText="Reset Search"
-  ></app-not-found> -->
 <div class="container-md">
   <div class="row">
     <ng-container *ngFor="let food of foods">
@@ -35,12 +31,7 @@
                 Price: <span style="color: green;">{{ food.price | currency:"INR" }}</span>
               </p>
             </div>
-            <!-- <div class="description">
-             <h6>Food Description</h6>
-             <p>{{food.description}}</p>
-            </div> -->
             <div class="button">
-              <!-- <button class="btn btn-dark">Order Now</button> -->
               <button class="btn btn-warning" (click)="addtocart()">Add to Cart</button>
             </div>
           </div>
@@ -50,3 +41,5 @@
   </div>
 </div>
 </div>
+
+
